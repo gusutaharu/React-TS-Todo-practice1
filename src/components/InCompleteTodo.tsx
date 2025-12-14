@@ -23,6 +23,12 @@ export const InCompleteTodo = (props: Props) => {
     })
     setTodos(newTodos);
   };
+  const onClickDelete = (id: number) => {
+    const newTodos = todos.filter((todo)=>{
+      return todo.id !== id;
+    });
+    setTodos(newTodos);
+  };
   return (
     <div className="inCompleteArea">
       <h4>未完了のTODO</h4>
@@ -31,7 +37,7 @@ export const InCompleteTodo = (props: Props) => {
           <li key={todo.id}>
             <p>{todo.text}</p>
             <button onClick={()=>onClickComplete(todo.id)}>完了</button>
-            <button>削除</button>
+            <button onClick={()=>onClickDelete(todo.id)}>削除</button>
           </li>
         ))}
       </ul>

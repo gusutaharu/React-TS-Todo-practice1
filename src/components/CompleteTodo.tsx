@@ -1,5 +1,4 @@
 
-
 type Props = {
   todos: {
     text: string;
