@@ -1,0 +1,59 @@
+.App {
+  width: 400px;
+}
+.inputArea {
+  background-color: rgb(198, 229, 217);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+input {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 16px;
+}
+
+button {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 8px;
+  margin-left: 4px;
+}
+
+button:hover {
+  background-color: #b0d2d4;
+  cursor: pointer;
+  color: white;
+}
+
+.inCompleteArea {
+  border: 2px solid rgb(198, 229, 217);
+  margin-top: 8px;
+  text-align: center;
+  min-height: 200px;
+  border-radius: 8px;
+}
+
+h4 {
+  color: gray;
+  margin: 8px 0;
+}
+
+li {
+  height: 32px;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  gap: 2px;
+}
+
+.completeArea {
+  border: 2px solid rgb(198, 229, 217);
+  background-color: #c9dede;
+  margin-top: 8px;
+  text-align: center;
+  min-height: 200px;
+  border-radius: 8px;
+}
