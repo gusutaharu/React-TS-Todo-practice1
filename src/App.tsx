@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { CompleteTodo } from "./components/CompleteTodo";
 import { InCompleteTodo } from "./components/InCompleteTodo";
@@ -10,18 +11,19 @@ type Todo = {
 
 export const App = () => {
 
-  const sampleTodos: Todo[] = [
-    { text: "タスク1", isComplete: true },
-    { text: "タスク2", isComplete: true },
-    { text: "タスク3", isComplete: false },
-    { text: "タスク4", isComplete: false },
-  ];
+  const [ inputTodo, setInputTodo ] = useState<string>("");
+  const [ todos, setTodos ] = useState<Todo[]>([]);
 
   return(
     <div className="App">
-      <InputTodo />
-      <InCompleteTodo todos={sampleTodos} />
-      <CompleteTodo todos={sampleTodos} />
+      <InputTodo 
+        inputTodo={inputTodo}
+        setInputTodo={setInputTodo}
+        todos={todos}
+        setTodos={setTodos}
+      />
+      <InCompleteTodo todos={todos} />
+      <CompleteTodo todos={todos} />
     </div>
   );
 };
