@@ -25,7 +25,7 @@ export const App = () => {
         setTodos={setTodos}
       />
       <InCompleteTodo todos={todos} setTodos={setTodos} />
-      <CompleteTodo todos={todos} />
+      <CompleteTodo todos={todos} setTodos={setTodos} />
     </div>
   );
 };
