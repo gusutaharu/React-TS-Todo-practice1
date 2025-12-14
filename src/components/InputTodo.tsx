@@ -1,20 +1,15 @@
+import { useState } from "react";
+import { Todo } from "../types/todo";
+
 type Props = {
-  inputTodo: string;
-  setInputTodo: React.Dispatch<React.SetStateAction<string>>;
-  todos: {
-    id: number;
-    text: string;
-    isComplete: boolean;
-  }[];
-  setTodos: React.Dispatch<React.SetStateAction<{
-    id: number;
-    text: string;
-    isComplete: boolean;
-  }[]>>;
+  todos: Todo[];
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 };
 
 export const InputTodo = (props: Props) => {
-  const { inputTodo, setInputTodo, todos, setTodos } = props;
+  const { todos, setTodos } = props;
+  const [ inputTodo, setInputTodo ] = useState<string>("");
+  
   const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputTodo(e.target.value);
   };

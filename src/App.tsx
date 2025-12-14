@@ -3,24 +3,14 @@ import "./App.css";
 import { CompleteTodo } from "./components/CompleteTodo";
 import { InCompleteTodo } from "./components/InCompleteTodo";
 import { InputTodo } from "./components/InputTodo";
-
-type Todo = {
-  id :number;
-  text: string;
-  isComplete: boolean;
-};
+import { Todo } from "./types/todo";
 
 export const App = () => {
-
-  const [ inputTodo, setInputTodo ] = useState<string>("");
   const [ todos, setTodos ] = useState<Todo[]>([]);
-
 
   return(
     <div className="App">
-      <InputTodo 
-        inputTodo={inputTodo}
-        setInputTodo={setInputTodo}
+      <InputTodo
         todos={todos}
         setTodos={setTodos}
       />

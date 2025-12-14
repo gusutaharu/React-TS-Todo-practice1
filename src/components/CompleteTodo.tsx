@@ -1,15 +1,8 @@
+import { Todo } from "../types/todo";
 
 type Props = {
-  todos: {
-    id: number;
-    text: string;
-    isComplete: boolean;
-  }[];
-  setTodos: React.Dispatch<React.SetStateAction<{
-    id: number;
-    text: string;
-    isComplete: boolean;
-  }[]>>
+  todos: Todo[];
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
 };
 
 export const CompleteTodo = (props: Props) => {
