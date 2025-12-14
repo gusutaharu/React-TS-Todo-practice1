@@ -5,6 +5,7 @@ import { InCompleteTodo } from "./components/InCompleteTodo";
 import { InputTodo } from "./components/InputTodo";
 
 type Todo = {
+  id :number;
   text: string;
   isComplete: boolean;
 };
@@ -14,6 +15,7 @@ export const App = () => {
   const [ inputTodo, setInputTodo ] = useState<string>("");
   const [ todos, setTodos ] = useState<Todo[]>([]);
 
+
   return(
     <div className="App">
       <InputTodo 
@@ -22,7 +24,7 @@ export const App = () => {
         todos={todos}
         setTodos={setTodos}
       />
-      <InCompleteTodo todos={todos} />
+      <InCompleteTodo todos={todos} setTodos={setTodos} />
       <CompleteTodo todos={todos} />
     </div>
   );
